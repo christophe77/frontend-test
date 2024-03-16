@@ -88,7 +88,7 @@ const NewsletterCard: ({ newsletter }: INewsletterCardProps) => JSX.Element = ({
 		return false;
 	};
 	return (
-		<Grid item xs={12} sm={3}>
+		<Grid item xs={12} sm={4}>
 			<StyledBox>
 				<TitleBlock>
 					<Title>{newsletter.title}</Title>

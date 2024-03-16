@@ -1,12 +1,21 @@
 body {
   margin: 0;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+/* sm */
+@media (min-width: 768px) and (max-width: 992px) {
+  body {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
-.header-bg {
-  background-color: #ffffff;
-  box-shadow: 1px 6px 8px 1px rgba(151, 143, 143, 0.59);
-  -webkit-box-shadow: 1px 6px 8px 1px rgba(151, 143, 143, 0.59);
-  -moz-box-shadow: 1px 6px 8px 1px rgba(151, 143, 143, 0.59);
+/* xs */
+@media (max-width: 768px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
+
