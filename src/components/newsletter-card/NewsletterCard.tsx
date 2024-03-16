@@ -5,7 +5,7 @@ import Newsletter from '@/types/newsletter';
 import { useAppSelector } from '@/lib/hooks';
 
 const StyledBox = styled(Box)(() => ({
-    position: 'relative',
+	position: 'relative',
 	marginTop: '15px',
 	marginBottom: '15px',
 	backgroundColor: 'white',
@@ -34,7 +34,7 @@ const Description = styled('div')(() => ({
 	lineHeight: '26px',
 	textAlign: 'center',
 	marginTop: '10px',
-    height : '60px'
+	height: '60px',
 }));
 
 const SubscribeFab = styled(Fab)(() => ({
@@ -45,17 +45,23 @@ const SubscribeFab = styled(Fab)(() => ({
 	padding: '8px, 30px, 8px, 30px',
 	textTransform: 'capitalize',
 	marginTop: '10px',
+	'&:hover': {
+		backgroundColor: '#FAEC70',
+	},
 }));
 
 const RegisterFab = styled(Fab)(() => ({
 	backgroundColor: '#B00005',
-    color:'white',
+	color: 'white',
 	borderRadius: '40px',
 	width: '123px',
 	height: '40px',
 	padding: '8px, 30px, 8px, 30px',
 	textTransform: 'capitalize',
 	marginTop: '10px',
+	'&:hover': {
+		backgroundColor: '#B00005',
+	},
 }));
 
 interface INewsletterCardProps {
