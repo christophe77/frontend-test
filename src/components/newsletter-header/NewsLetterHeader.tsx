@@ -8,6 +8,7 @@ const StyledBox = styled(Box)(() => ({
 	marginBottom: '15px',
 	backgroundColor: '#F4F4F4',
 	borderRadius: '10px',
+	padding: '20px',
 }));
 
 const Title = styled('div')(() => ({

@@ -7,7 +7,8 @@ const StyledBox = styled(Box)(() => ({
 	marginTop: '15px',
 	marginBottom: '15px',
 	backgroundColor: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
+    width:'100%'
 }));
 
 const TitleBlock = styled('div')(() => ({
@@ -30,6 +31,7 @@ const Description = styled('div')(() => ({
 	fontSize: '16px',
 	lineHeight: '26px',
 	textAlign: 'center',
+    marginTop: '10px'
 }));
 
 const SubscribeFab = styled(Fab)(() => ({
@@ -39,6 +41,7 @@ const SubscribeFab = styled(Fab)(() => ({
 	height: '40px',
 	padding: '8px, 30px, 8px, 30px',
 	textTransform: 'capitalize',
+    marginTop: '10px'
 }));
 
 const RegisterFab = styled(Fab)(() => ({
@@ -48,6 +51,7 @@ const RegisterFab = styled(Fab)(() => ({
 	height: '40px',
 	padding: '8px, 30px, 8px, 30px',
 	textTransform: 'capitalize',
+    marginTop: '10px'
 }));
 
 interface INewsletterCardProps {
@@ -58,7 +62,7 @@ const NewsletterCard: ({ newsletter }: INewsletterCardProps) => JSX.Element = ({
 	newsletter,
 }: INewsletterCardProps) => {
 	return (
-		<Grid item xs={12} sm={6} md={4}>
+		<Grid item xs={12} sm={4}>
 			<StyledBox>
 				<TitleBlock>
 					<Title>{newsletter.title}</Title>

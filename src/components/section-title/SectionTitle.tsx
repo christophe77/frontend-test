@@ -7,7 +7,7 @@ const Title = styled('div')(() => ({
 	fontSize: '22px',
 	lineHeight: '27.65px',
 	textTransform: 'uppercase',
-    marginTop : '15px',
+    marginTop : '30px',
     marginBottom : '15px',
 }));
 
@@ -16,6 +16,7 @@ const Rectangle = styled('div')(() => ({
 	height: '4px',
 	borderRadius: '10px',
 	backgroundColor: '#B00005',
+	marginBottom : '15px',
 }));
 
 interface ISectionTitleProps {
