@@ -1,13 +1,13 @@
 'use client';
 import { Box } from '@mui/material';
 import { styled } from '@mui/system';
+import { FC } from 'react';
 
 const StyledBox = styled(Box)(() => ({
+    marginTop: '15px',
+	marginBottom: '15px',
 	backgroundColor: '#F4F4F4',
-	marginTop: '30px',
 	borderRadius: '10px',
-    marginLeft : '15vh',
-    marginRight : '15vh'
 }));
 
 const Title = styled('div')(() => ({
@@ -29,7 +29,7 @@ const Text = styled('div')(() => ({
 	textAlign: 'center',
 }));
 
-const NewsLetterHeader = () => {
+const NewsLetterHeader: FC = () => {
 	return (
 		<StyledBox>
 			<Title>Newsletters</Title>
