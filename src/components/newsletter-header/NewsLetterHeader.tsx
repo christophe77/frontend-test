@@ -29,7 +29,7 @@ const Text = styled('div')(() => ({
 	textAlign: 'center',
 }));
 
-const NewsLetterHeader: FC = () => {
+const NewsletterHeader: FC = () => {
 	return (
 		<StyledBox>
 			<Title>Newsletters</Title>
@@ -43,4 +43,4 @@ const NewsLetterHeader: FC = () => {
 	);
 };
 
-export default NewsLetterHeader;
+export default NewsletterHeader;
