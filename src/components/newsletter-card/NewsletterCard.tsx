@@ -2,7 +2,7 @@
 import { Box, Fab, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 import Newsletter from '@/types/newsletter';
-import { useAppSelector } from '@/lib/hooks';
+import useNewsletterCard from './useNewsletterCard';
 
 const StyledBox = styled(Box)(() => ({
 	position: 'relative',
@@ -71,22 +71,7 @@ interface INewsletterCardProps {
 const NewsletterCard: ({ newsletter }: INewsletterCardProps) => JSX.Element = ({
 	newsletter,
 }: INewsletterCardProps) => {
-	const user = useAppSelector((state) => state.user);
-	const userHasRight: (newsletterSubscriptions: string[]) => boolean = (
-		newsletterSubscriptions: string[],
-	) => {
-		if (newsletterSubscriptions.length === 0) {
-			return true;
-		}
-		if (
-			user.subscriptions.some((subscription) =>
-				newsletterSubscriptions.includes(subscription),
-			)
-		) {
-			return true;
-		}
-		return false;
-	};
+	const { userHasRight } = useNewsletterCard();
 	return (
 		<Grid item xs={12} sm={4}>
 			<StyledBox>

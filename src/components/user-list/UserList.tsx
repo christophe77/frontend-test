@@ -9,8 +9,7 @@ import {
 	USER_WITH_ONE_SUBSCRIPTION,
 	USER_WITH_MULTIPLE_SUBSCRIPTION,
 } from '@/mocks/user';
-import { useAppSelector, useAppDispatch } from '@/lib/hooks';
-import { changeUser } from '@/lib/features/user/userSlice';
+import useUserList from './useUserList';
 
 interface IUserDivProps {
 	fontWeight: string;
@@ -24,28 +23,27 @@ const UserDiv = styled('div')((props: IUserDivProps) => ({
 }));
 
 const UserList: FC = () => {
-	const user = useAppSelector((state) => state.user);
-	const dispatch = useAppDispatch();
+	const { user, changeUserSubscriptions } = useUserList();
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position="static" sx={{ backgroundColor: '#F4F4F4' }}>
 				<Toolbar>
 					<UserDiv
 						fontWeight={user.subscriptions.length === 0 ? 'bold' : 'regular'}
-						onClick={() => dispatch(changeUser(USER_WITHOUT_SUBSCRIPTION))}
+						onClick={() => changeUserSubscriptions(USER_WITHOUT_SUBSCRIPTION)}
 					>
 						User 0
 					</UserDiv>
 					<UserDiv
 						fontWeight={user.subscriptions.length === 1 ? 'bold' : 'regular'}
-						onClick={() => dispatch(changeUser(USER_WITH_ONE_SUBSCRIPTION))}
+						onClick={() => changeUserSubscriptions(USER_WITH_ONE_SUBSCRIPTION)}
 					>
 						User 1
 					</UserDiv>
 					<UserDiv
 						fontWeight={user.subscriptions.length > 1 ? 'bold' : 'regular'}
 						onClick={() =>
-							dispatch(changeUser(USER_WITH_MULTIPLE_SUBSCRIPTION))
+							changeUserSubscriptions(USER_WITH_MULTIPLE_SUBSCRIPTION)
 						}
 					>
 						User X
