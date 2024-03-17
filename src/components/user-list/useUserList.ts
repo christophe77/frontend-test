@@ -2,7 +2,10 @@ import { useAppSelector, useAppDispatch } from '@/lib/hooks';
 import { changeUser } from '@/lib/features/user/userSlice';
 import User from '@/types/user';
 
-const useUserList = () => {
+const useUserList: () => {
+	user: User;
+	changeUserSubscriptions: (user: User) => void;
+} = () => {
 	const user: User = useAppSelector((state) => state.user);
 	const dispatch = useAppDispatch();
 	const changeUserSubscriptions = (user: User) => {

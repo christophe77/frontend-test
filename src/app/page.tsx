@@ -1,5 +1,5 @@
 'use server';
-import React from 'react';
+import React, { FC } from 'react';
 import { Grid } from '@mui/material';
 import UserList from '@/components/user-list/UserList';
 import NewsletterHeader from '@/components/newsletter-header/NewsletterHeader';
@@ -8,7 +8,7 @@ import SectionTitle from '@/components/section-title/SectionTitle';
 import { NEWSLETTER_ITEMS } from '@/mocks/newsletters';
 import Newsletter from '@/types/newsletter';
 
-const page = () => {
+const page : FC = () => {
 	const sanList = NEWSLETTER_ITEMS.filter(
 		(newsletter: Newsletter) => newsletter.site === 'SAN',
 	);

@@ -1,6 +1,10 @@
 import { useAppSelector } from '@/lib/hooks';
+import User from '@/types/user';
 
-const useNewsletterCard = () => {
+const useNewsletterCard: () => {
+	user: User;
+	userHasRight: (newsletterSubscriptions: string[]) => boolean;
+} = () => {
 	const user = useAppSelector((state) => state.user);
 	const userHasRight: (newsletterSubscriptions: string[]) => boolean = (
 		newsletterSubscriptions: string[],
